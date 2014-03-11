@@ -10,3 +10,7 @@ preserve-inputs
 bootstrap
 iron-router
 external-file-loader
+accounts-password
+accounts-ui
+accounts-twitter
+accounts-facebook

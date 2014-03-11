@@ -1,7 +1,8 @@
 <template name="navbar">
   <ul class="nav nav-pills">
-    <li class="active"><a href="/">home</a></li>
+    <li class="active"><a href="{{pathFor 'maphome'}}">home</a></li>
     <li><a href="{{pathFor 'markerSubmit'}}">add new art</a></li>
     <li><a href="#">discover art</a></li>
+    <li><a>{{loginButtons}}</a></li>
   </ul>
 </template>
