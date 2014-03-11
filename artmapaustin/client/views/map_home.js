@@ -4,7 +4,7 @@ Meteor.Loader.loadJs('//cdn.leafletjs.com/leaflet-0.7.2/leaflet.js', Template.ma
 };
 
 Template.maphome.rendered = function() {
-var map = L.map('map').setView([51.505, -0.09], 13);
+var map = L.map('map').setView([30.28, -97.73], 13);
 
 var OpenStreetMap_Mapnik = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
