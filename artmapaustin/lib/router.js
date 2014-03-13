@@ -1,5 +1,8 @@
 Router.configure({
-  layoutTemplate: 'layout'
+  layoutTemplate: 'layout',
+  waitOn: function() {
+      return Meteor.subscribe('artspots');
+    }
 });
 
 Router.map(function() {
@@ -8,4 +11,10 @@ Router.map(function() {
   this.route('markerSubmit', {
     path: '/submit'
   });
-})
+
+  this.route('artspotPage', {
+    path: '/artspots/:_id',
+    data: function() { return Artspots.findOne(this.params._id); }
+  });
+
+});
