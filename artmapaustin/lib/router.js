@@ -8,13 +8,13 @@ Router.configure({
 Router.map(function() {
   this.route('maphome', {path: '/'});
 
-  this.route('markerSubmit', {
-    path: '/submit'
-  });
-
   this.route('artspotPage', {
     path: '/artspots/:_id',
     data: function() { return Artspots.findOne(this.params._id); }
+  });
+
+  this.route('markerSubmit', {
+    path: '/submit'
   });
 
 });

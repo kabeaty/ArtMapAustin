@@ -3,6 +3,8 @@ Meteor.Loader.loadCss('//cdn.leafletjs.com/leaflet-0.7.2/leaflet.css');
 Meteor.Loader.loadJs('//cdn.leafletjs.com/leaflet-0.7.2/leaflet.js', Template.maphome.rendered);
 };
 
+var marker;
+
 Template.markerSubmit.rendered = function() {
 var map = L.map('map');
 map.setView([30.28, -97.73], 13);
@@ -26,16 +28,17 @@ map.locate({setView: true})
 
 OpenStreetMap_Mapnik.addTo(map);
 
-var marker;
 map.on('click', function(e) {
   if (!map.hasLayer(marker)) {
   marker = L.marker([e.latlng.lat, e.latlng.lng], {draggable: true});
   map.addLayer(marker);
-  marker.bindPopup("The art is here").openPopup();
+  marker.bindPopup("Adding art here").openPopup();
   } else {
     $('#marker-true').text("You already added a marker. Drag to change its location.");
   }
   });
+
+};
 
 Template.markerSubmit.events({
   'submit form': function(e, template) {
@@ -43,15 +46,13 @@ Template.markerSubmit.events({
 
     var artspot = {
       description: $(e.target).find('[name=description]').val(),
-      latitude: marker.latlng.lat,
-      longitude: marker.latlng.lng
+      latitude: marker._latlng.lat,
+      longitude: marker._latlng.lng
     };
 
     artspot._id = Artspots.insert(artspot);
     Router.go('artspotPage', artspot);
+
   }
 });
-
-
-};
 

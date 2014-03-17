@@ -1,14 +1,14 @@
 <template name="markerSubmit">
-  <form name="marker" class="marker-form">
+  <form class="main">
     <div class="control-group">
+      <label class="control-label" for="description">description of art</label>
       <div class="controls">
-        <label for="body">add description of art</label>
-        <input type="text" name="description" value=""></input>
+        <input name="description" type="text" value="" placeholder="description of art"/>
       </div>
     </div>
     <div class="control-group">
       <div class="controls">
-        <button type="submit" class="btn">submit</button>
+        <input type="submit" value="Submit" class="btn btn-primary"/>
       </div>
     </div>
   </form>
