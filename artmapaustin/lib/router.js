@@ -1,12 +1,11 @@
 Router.configure({
   layoutTemplate: 'layout',
-  waitOn: function() {
-      return Meteor.subscribe('artspots');
-    }
 });
 
 Router.map(function() {
-  this.route('maphome', {path: '/'});
+  this.route('maphome', {
+    path: '/',
+  });
 
   this.route('artspotPage', {
     path: '/artspots/:_id',

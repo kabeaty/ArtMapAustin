@@ -1,6 +1,7 @@
 {
   "packages": {
     "iron-router": {},
-    "external-file-loader": {}
+    "external-file-loader": {},
+    "leaflet": {}
   }
 }

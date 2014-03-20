@@ -1,1 +1,1 @@
-Artspots = new Meteor.Collection('artspots');
+// Artspots = new Meteor.Collection('artspots');

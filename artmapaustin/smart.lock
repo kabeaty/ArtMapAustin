@@ -3,7 +3,8 @@
   "dependencies": {
     "basePackages": {
       "iron-router": {},
-      "external-file-loader": {}
+      "external-file-loader": {},
+      "leaflet": {}
     },
     "packages": {
       "iron-router": {
@@ -15,6 +16,11 @@
         "git": "https://github.com/davidd8/meteor-external-file-loader.git",
         "tag": "v0.1.4",
         "commit": "352694a7cf906b8241161c2fd1435161c1d5409f"
+      },
+      "leaflet": {
+        "git": "https://github.com/bevanhunt/meteor-leaflet.git",
+        "tag": "v0.3.6",
+        "commit": "d9e3bdb824145c1078e52945909bb1cf38724da5"
       }
     }
   }
