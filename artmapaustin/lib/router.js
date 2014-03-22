@@ -16,4 +16,8 @@ Router.map(function() {
     path: '/submit'
   });
 
+  this.route('discoverArt', {
+    path: '/discover'
+  });
+
 });

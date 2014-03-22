@@ -40,6 +40,7 @@ Template.markerSubmit.events({
         e.preventDefault();
 
     var artspot = {
+        title: $(e.target).find('[name=title]').val(),
         description: $(e.target).find('[name=description]').val(),
         latitude: marker._latlng.lat,
         longitude: marker._latlng.lng
