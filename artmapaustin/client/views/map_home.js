@@ -17,10 +17,10 @@ Template.maphome.rendered = function() {
             each = spots[i];
             marked = new L.marker([each.latitude, each.longitude]);
             marked.bindPopup(each.description).addTo(mapHome);
+        }
     }
-  }
 
-addToMap();
+    addToMap();
 
 };
 

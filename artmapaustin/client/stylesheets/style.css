@@ -1,3 +1,28 @@
+body {
+  background: #eee;
+}
+
+#page-header {
+  padding-bottom: 9px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.home-pills {
+  padding-right: 20px;
+}
+
+.nav-pills .active a:hover {
+  background-color:gray;
+}
+
+.nav-pills .active a {
+  background-color:#0088cc;
+}
+
+.well {
+  background-color:#d3d3d3;
+}
+
 #map-home {
   height: 500px;
 }
@@ -5,3 +30,10 @@
 #map {
   height: 500px;
 }
+
+#map-spot {
+  height: 300px;
+}
+
+
+
