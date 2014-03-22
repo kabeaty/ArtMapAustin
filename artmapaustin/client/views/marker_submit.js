@@ -39,15 +39,15 @@ Template.markerSubmit.events({
     'submit form': function(e, template) {
         e.preventDefault();
 
-    var artspot = {
-        title: $(e.target).find('[name=title]').val(),
-        description: $(e.target).find('[name=description]').val(),
-        latitude: marker._latlng.lat,
-        longitude: marker._latlng.lng
-    };
+    // var artspot = {
+    //     title: $(e.target).find('[name=title]').val(),
+    //     description: $(e.target).find('[name=description]').val(),
+    //     latitude: marker._latlng.lat,
+    //     longitude: marker._latlng.lng
+    // };
 
-    artspot._id = Artspots.insert(artspot);
-    Router.go('artspotPage', artspot);
+    // artspot._id = Artspots.insert(artspot);
+    // Router.go('artspotPage', artspot);
     }
 });
 
