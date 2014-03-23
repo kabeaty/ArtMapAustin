@@ -18,8 +18,9 @@
       </div>
     </div>
   </form>
-  <div>
-    <p id="marker-true"></p>
+  <div class="alert alert-warning alert-dismissable" id="marker-true">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    Drag your marker to change its location. Click <a class="alert-link" id="marker-alert">here</a> for a new marker.
   </div>
   {{#constant}}
 <div id="map"></div>

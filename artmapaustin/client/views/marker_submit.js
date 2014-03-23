@@ -3,6 +3,7 @@ L.Icon.Default.imagePath = 'packages/leaflet/images'
 var marker;
 
 Template.markerSubmit.rendered = function() {
+    $('#marker-true').hide();
     var map = L.map('map');
         map.setView([30.28, -97.73], 13);
     var OpenStreetMap_Mapnik = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -30,8 +31,12 @@ Template.markerSubmit.rendered = function() {
             map.addLayer(marker);
             marker.bindPopup("Adding art here").openPopup();
         } else {
-            $('#marker-true').text("You already added a marker. Drag to change its location.");
+            $('#marker-true').show();
         }
+    });
+
+    $('#marker-alert').on('click', function() {
+        map.removeLayer(marker);
     });
 };
 
