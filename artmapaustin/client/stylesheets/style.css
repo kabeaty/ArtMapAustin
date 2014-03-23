@@ -19,5 +19,17 @@ body {
   height: 300px;
 }
 
+#twitter-button {
+  width: 200px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  background-color: #eee;
+}
+
+#tweet-text {
+  color:black;
+  text-decoration: none;
+}
+
 
 

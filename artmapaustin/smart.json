@@ -3,6 +3,7 @@
     "iron-router": {},
     "external-file-loader": {},
     "leaflet": {},
-    "bootstrap-3": {}
+    "bootstrap-3": {},
+    "font-awesome": {}
   }
 }
