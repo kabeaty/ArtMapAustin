@@ -1,25 +1,10 @@
 body {
   background: #eee;
+  padding-top: 70px;
 }
 
-#page-header {
-  border-bottom: 1px solid #eeeeee;
-}
-
-.home-pills {
-  padding-right: 20px;
-}
-
-.nav-pills .active a:hover {
-  background-color:gray;
-}
-
-.nav-pills .active a {
-  background-color:#0088cc;
-}
-
-.well {
-  background-color:#d3d3d3;
+#top-row-home {
+  padding-bottom: 10px;
 }
 
 #map-home {

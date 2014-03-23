@@ -1,6 +1,12 @@
 <template name="artspotPage">
-  <h2>{{title}}</h2>
-  <h4>{{description}}</h4>
+  <div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{title}}</h3>
+  </div>
+  <div class="panel-body">
+    {{description}}
+  </div>
+</div>
   {{#constant}}
 <div id="map-spot"></div>
   {{/constant}}

@@ -1,11 +1,23 @@
 <template name="navbar">
-  <div id="page-header">
-    <h2>artMapAustin <small>discover art around you</small></h2>
-  </div>
-  <ul class="nav nav-pills">
-    <li class="active home-pills"><a href="{{pathFor 'maphome'}}">home</a></li>
-    <li class="active home-pills"><a href="{{pathFor 'markerSubmit'}}">add new art</a></li>
-    <li class="active home-pills"><a href="{{pathFor 'discoverArt'}}">discover art</a></li>
-    <li><a>{{loginButtons}}</a></li>
-  </ul>
-</template>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      <a class="navbar-brand" href="#"><strong>artMapAustin</strong></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/">home</a></li>
+        <li><a href={{pathFor 'markerSubmit'}}>add new art</a></li>
+        <li><a href={{pathFor 'discoverArt'}}>discover art</a></li>
+        <li><a>{{loginButtons}}</a></li>
+      </ul>
+    </div>
+  </template>
