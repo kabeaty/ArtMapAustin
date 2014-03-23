@@ -20,4 +20,18 @@ Router.map(function() {
     path: '/discover'
   });
 
+  var requireLogin = function() {
+    if (! Meteor.user()) {
+      if (Meteor.loggingIn())
+        this.render(this.loadingTemplate);
+      } else {
+        this.render('accessDenied');
+
+      this.stop();
+      }
+    }
+  }
+
+  Router.before(requireLogin, {only: 'markerSubmit'});
+
 });
