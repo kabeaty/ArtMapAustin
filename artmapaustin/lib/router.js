@@ -19,6 +19,7 @@ Router.map(function() {
   this.route('discoverArt', {
     path: '/discover'
   });
+});
 
   var requireLogin = function() {
     if (! Meteor.user()) {
@@ -30,8 +31,5 @@ Router.map(function() {
       this.stop();
       }
     }
-  }
 
   Router.before(requireLogin, {only: 'markerSubmit'});
-
-});
