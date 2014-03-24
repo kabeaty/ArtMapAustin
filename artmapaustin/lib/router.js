@@ -22,10 +22,10 @@ Router.map(function() {
 });
 
   var requireLogin = function() {
-    if (! Meteor.user()) {
+    if (!Meteor.user()) {
       if (Meteor.loggingIn())
         this.render(this.loadingTemplate);
-      } else {
+      else
         this.render('accessDenied');
 
       this.stop();

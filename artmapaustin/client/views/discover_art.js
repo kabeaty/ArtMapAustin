@@ -1,6 +1,6 @@
 Template.discoverArt.helpers({
     artspots: function() {
-        return Artspots.find();
+        return Artspots.find({}, {sort: {submitted: -1}});
     }
 });
 

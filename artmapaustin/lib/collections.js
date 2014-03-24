@@ -19,7 +19,7 @@ Meteor.methods({
             throw new Meteor.Error(401, "Please log in to add art");
         }
         // ensure the post has a title
-        if (!postAttributes.title) {
+        if (!artspotAttributes.title) {
             throw new Meteor.Error(422, 'Please provide a title');
         // check that there are no previous posts with the same link
         }
