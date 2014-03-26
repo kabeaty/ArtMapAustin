@@ -4,6 +4,9 @@
     "external-file-loader": {},
     "leaflet": {},
     "bootstrap-3": {},
-    "font-awesome": {}
+    "font-awesome": {},
+    "photo-uploader": {
+            "git": "https://github.com/pfafman/meteor-photo-uploader.git"
+        }
   }
 }

@@ -1,5 +1,9 @@
 L.Icon.Default.imagePath = 'packages/leaflet/images'
 
+Object.Template.artspotPage.created = function() {
+    myObject = new PhotoUploader( [options] )
+};
+
 Template.artspotPage.rendered = function() {
 
     var mapSpot = L.map('map-spot').setView([this.data.latitude, this.data.longitude], 13);

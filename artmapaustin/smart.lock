@@ -6,7 +6,11 @@
       "external-file-loader": {},
       "leaflet": {},
       "bootstrap-3": {},
-      "font-awesome": {}
+      "font-awesome": {},
+      "photo-uploader": {
+        "git": "https://github.com/pfafman/meteor-photo-uploader.git",
+        "branch": "master"
+      }
     },
     "packages": {
       "iron-router": {
@@ -33,6 +37,11 @@
         "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
         "tag": "v4.0.3",
         "commit": "61e9361384347547ae144f8228faa4deffda23db"
+      },
+      "photo-uploader": {
+        "git": "https://github.com/pfafman/meteor-photo-uploader.git",
+        "branch": "master",
+        "commit": "c5015ea038ff718357196406224b20e8098f6ae3"
       }
     }
   }

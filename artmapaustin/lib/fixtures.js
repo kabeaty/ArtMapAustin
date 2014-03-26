@@ -1,4 +1,4 @@
-if (Artspots.find().count() === 0) {
+if (Meteor.isServer && Artspots.find().count() === 0) {
   Artspots.insert({
     title: "The Frank Erwin Center",
     description: "This is more information about the Frank Erwin Center",
