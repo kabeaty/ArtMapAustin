@@ -1,15 +1,15 @@
-<template name="markerSubmit">
+<template name="artspotEdit">
   <form class="main">
     <div class="control-group">
       <label class="control-label" for="description">short title</label>
-      <div class="controls">
-        <input name="title" type="text" value=""/>
+      <div class="input-group input-group-lg">
+        <input class="form-control" name="title" type="text" placeholder={{title}}/>
       </div>
     </div>
     <div class="control-group">
       <label class="control-label" for="description">description of art</label>
       <div class="controls">
-        <input name="description" type="text" value=""/>
+        <input class="edit-input" name="description" type="text" placeholder={{description}}/>
       </div>
     </div>
     <div class="control-group">
@@ -20,11 +20,4 @@
       </div>
     </div>
   </form>
-  <div class="alert alert-warning alert-dismissable" id="marker-true">
-    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-    Drag your marker to change its location. Click <a class="alert-link" id="marker-alert">here</a> for a new marker.
-  </div>
-  {{#constant}}
-<div id="map"></div>
-  {{/constant}}
 </template>

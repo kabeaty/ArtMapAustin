@@ -23,10 +23,20 @@ body {
   height: 300px;
 }
 
+#artspot-edit {
+  float: right;
+}
+
+/*.edit-input {
+  height: 300px;
+}*/
+
+.fa.fa-twitter {
+  color: #3F9EE5;
+}
+
 #twitter-button {
-  width: 200px;
-  -webkit-border-radius: 5px 5px 5px 5px;
-  border-radius: 5px 5px 5px 5px;
+  margin-bottom: 10px;
   background-color: #eee;
 }
 

@@ -12,6 +12,11 @@ Router.map(function() {
     data: function() { return Artspots.findOne(this.params._id); }
   });
 
+  this.route('artspotEdit', {
+    path: '/artspots/:_id/edit',
+    data: function() { return Artspots.findOne(this.params._id); }
+  });
+
   this.route('markerSubmit', {
     path: '/submit'
   });
