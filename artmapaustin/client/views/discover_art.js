@@ -11,7 +11,6 @@ Template.discoverArt.events({
         var artspot = {
           title: this.title,
           description: this.description,
-          id: this._id,
           longitude: this.longitude,
           latitude: this.latitude
         }
