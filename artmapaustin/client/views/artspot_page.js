@@ -1,4 +1,4 @@
-L.Icon.Default.imagePath = 'packages/leaflet/images'
+L.Icon.Default.imagePath = '/images'
 
 // Object.Template.artspotPage.created = function() {
 //     myObject = new PhotoUploader( [options] )
@@ -14,8 +14,8 @@ Template.artspotPage.rendered = function() {
 
     OpenStreetMap_Mapnik.addTo(mapSpot);
 
-    var mark = new L.marker([this.data.latitude, this.data.longitude]);
-        mark.bindPopup(this.data.title).addTo(mapSpot);
+    var mark = L.marker([this.data.latitude, this.data.longitude]);
+    mark.bindPopup(this.data.title).addTo(mapSpot);
 };
 
 // Template.artspotPage.rendered = function() {

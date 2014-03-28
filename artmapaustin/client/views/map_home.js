@@ -15,7 +15,7 @@ Template.maphome.rendered = function() {
         var each, marked;
         for (var i = 0; i < spots.length; i++) {
             each = spots[i];
-            marked = new L.marker([each.latitude, each.longitude]);
+            marked = L.marker([each.latitude, each.longitude]);
             marked.bindPopup(each.title).addTo(mapHome);
         }
     }
