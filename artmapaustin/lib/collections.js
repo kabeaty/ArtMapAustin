@@ -24,7 +24,7 @@ Meteor.methods({
         // check that there are no previous posts with the same link
         }
         // pick out the whitelisted keys
-        var artspot = _.extend(_.pick(artspotAttributes, 'title', 'description'), {
+        var artspot = _.extend(_.pick(artspotAttributes, 'title', 'description', 'latitude', 'longitude'), {
             userId: user._id,
             submitter: user.username,
             submitted: new Date().getTime()
