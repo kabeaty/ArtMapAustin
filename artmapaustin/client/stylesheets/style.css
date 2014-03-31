@@ -1,5 +1,5 @@
 body {
-  padding-top: 70px;
+  padding-top: 40px;
   background: url('grunge_wall/grunge_wall.png');
 }
 
@@ -24,7 +24,7 @@ body {
 }
 
 #artspot-edit {
-  float: right;
+  float:right;
 }
 
 #artspot-comments {
