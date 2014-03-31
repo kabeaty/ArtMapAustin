@@ -1,5 +1,8 @@
 Router.configure({
   layoutTemplate: 'layout',
+  waitOn: function() {
+    return [Meteor.subscribe('artspots'), Meteor.subscribe('comments')];
+  }
 });
 
 Router.map(function() {
@@ -37,4 +40,4 @@ Router.map(function() {
       }
     }
 
-  Router.before(requireLogin, {only: 'markerSubmit'});
+  Router.onBeforeAction(requireLogin, {only: 'markerSubmit'});

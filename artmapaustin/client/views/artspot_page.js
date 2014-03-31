@@ -1,5 +1,5 @@
-L.Icon.Default.imagePath = '/images'
-
+// L.Icon.Default.imagePath = '/images'
+// L.Icon.Default.imagePath = 'packages/leaflet/images'
 // Object.Template.artspotPage.created = function() {
 //     myObject = new PhotoUploader( [options] )
 // };
@@ -7,6 +7,7 @@ L.Icon.Default.imagePath = '/images'
 Template.artspotPage.rendered = function() {
 
     var mapSpot = L.map('map-spot');
+    console.log(this.data);
     mapSpot.setView([this.data.latitude, this.data.longitude], 13);
     var OpenStreetMap_Mapnik = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
@@ -14,7 +15,13 @@ Template.artspotPage.rendered = function() {
 
     OpenStreetMap_Mapnik.addTo(mapSpot);
 
-    var mark = L.marker([this.data.latitude, this.data.longitude]);
+    var myIcon = L.icon({
+      iconUrl: 'packages/leaflet/images/marker-icon.png',
+      iconRetinaUrl: 'packages/leaflet/images/marker-icon-2x.png',
+      shadowUrl: 'packages/leaflet/images/marker-shadow.png'
+    });
+
+    var mark = L.marker([this.data.latitude, this.data.longitude], {icon: myIcon});
     mark.bindPopup(this.data.title).addTo(mapSpot);
 };
 
@@ -37,4 +44,10 @@ Template.artspotPage.events({
       Router.go('artspotEdit', artspot);
   }
 })
+
+Template.artspotPage.helpers({
+  comments: function() {
+    return Comments.find({artspotId: this._id});
+  }
+});
 

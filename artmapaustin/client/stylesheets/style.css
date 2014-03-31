@@ -1,5 +1,4 @@
 body {
-  /*background: #eee;*/
   padding-top: 70px;
   background: url('grunge_wall/grunge_wall.png');
 }
@@ -11,10 +10,6 @@ body {
 .top-row-header {
   color: #3773BB;
 }
-
-/*.home-desc {
-  color: white;
-}*/
 
 #map-home {
   height: 500px;
@@ -32,9 +27,9 @@ body {
   float: right;
 }
 
-/*.edit-input {
-  height: 300px;
-}*/
+#artspot-comments {
+  padding-top: 20px;
+}
 
 .fa.fa-twitter {
   color: #3F9EE5;

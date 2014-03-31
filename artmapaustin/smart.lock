@@ -2,7 +2,10 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "iron-router": {},
+      "iron-router": {
+        "git": "https://github.com/EventedMind/iron-router.git",
+        "branch": "blaze-integration"
+      },
       "external-file-loader": {},
       "leaflet": {},
       "bootstrap-3": {},
@@ -15,8 +18,8 @@
     "packages": {
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
-        "tag": "v0.6.4",
-        "commit": "927bbaed1b87894fb6fb70807f74ff3a5bd89f29"
+        "branch": "blaze-integration",
+        "commit": "947991731df164e56b53cfdae8ef23802d989142"
       },
       "external-file-loader": {
         "git": "https://github.com/davidd8/meteor-external-file-loader.git",
@@ -42,6 +45,11 @@
         "git": "https://github.com/pfafman/meteor-photo-uploader.git",
         "branch": "master",
         "commit": "c5015ea038ff718357196406224b20e8098f6ae3"
+      },
+      "blaze-layout": {
+        "git": "https://github.com/EventedMind/blaze-layout.git",
+        "branch": "master",
+        "commit": "8bc53798fe5965669ae67c72f91829fcfdceabfd"
       }
     }
   }

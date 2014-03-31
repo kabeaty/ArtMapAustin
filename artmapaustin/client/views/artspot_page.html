@@ -3,11 +3,22 @@
   <a href={{pathFor 'artspotEdit'}} class="btn btn-default btn-primary" id="artspot-edit"><span class="glyphicon glyphicon-pencil"></span> edit artspot</a>
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h3 class="panel-title">{{title}}</h3>
+      <h3 class="panel-title">{{> title}}</h3>
     </div>
     <div class="panel-body">
-      {{description}}
+      {{> description}}
     </div>
     </div>
-  <div id="map-spot"></div>
+  <div id="map-spot">
+  </div>
+  <ul class="media-list">
+    <li class="media">
+      <div class="media-body" id="artspot-comments">
+        {{#each comments}}
+        <!-- <h4 class="media-heading">New comment</h4> -->
+          {{> comment}}
+        {{/each}}
+      </div>
+    </li>
+  </ul>
 </template>
