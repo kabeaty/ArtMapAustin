@@ -68,7 +68,7 @@ Template.artspotPage.events({
 
 Template.artspotPage.helpers({
   comments: function() {
-    return Comments.find({artspotId: this._id});
+    return Comments.find({artspotId: this._id}, {sort: {submitted: -1}});
   }
 });
 
