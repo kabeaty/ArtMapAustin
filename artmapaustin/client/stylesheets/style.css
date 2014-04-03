@@ -39,6 +39,10 @@ body {
   width: 500px;
 }
 
+#comment-button {
+  margin-left: 10px;
+}
+
 .fa.fa-twitter {
   color: #3F9EE5;
 }
