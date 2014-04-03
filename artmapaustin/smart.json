@@ -1,15 +1,16 @@
 {
   "packages": {
     "iron-router": {
-        "git": "https://github.com/EventedMind/iron-router.git",
-        "branch": "blaze-integration"
-        },
+      "git": "https://github.com/EventedMind/iron-router.git",
+      "branch": "blaze-integration"
+    },
     "external-file-loader": {},
     "leaflet": {},
     "bootstrap-3": {},
     "font-awesome": {},
     "photo-uploader": {
-            "git": "https://github.com/pfafman/meteor-photo-uploader.git"
-        }
+      "git": "https://github.com/pfafman/meteor-photo-uploader.git"
+    },
+    "moment": {}
   }
 }

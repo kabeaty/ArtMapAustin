@@ -1,9 +1,6 @@
 <template name="comment">
    <li>
-     <h4>
-       <span class="author">{{author}}</span>
-       <span class="date">{{submittedText}}</span>
-     </h4>
-   <p>{{body}}</p>
+     <span id="comment-author">{{author}}</span> | {{formatDate submittedText "long"}}
+     <p>{{body}}</p>
    </li>
 </template>

@@ -13,7 +13,8 @@
       "photo-uploader": {
         "git": "https://github.com/pfafman/meteor-photo-uploader.git",
         "branch": "master"
-      }
+      },
+      "moment": {}
     },
     "packages": {
       "iron-router": {
@@ -46,10 +47,15 @@
         "branch": "master",
         "commit": "c5015ea038ff718357196406224b20e8098f6ae3"
       },
+      "moment": {
+        "git": "https://github.com/acreeger/meteor-moment.git",
+        "tag": "v2.5.1",
+        "commit": "8c9bc5d3fc96705057737cb9743d555417f6e551"
+      },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
         "branch": "master",
-        "commit": "8bc53798fe5965669ae67c72f91829fcfdceabfd"
+        "commit": "eaa6b5f3c2c25f831f6453f8962b33f69d9b21a4"
       }
     }
   }

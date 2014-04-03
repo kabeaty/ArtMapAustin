@@ -43,6 +43,11 @@ body {
   margin-left: 10px;
 }
 
+#comment-author {
+  font-style: bold;
+  font-size: 24px;
+}
+
 .fa.fa-twitter {
   color: #3F9EE5;
 }
