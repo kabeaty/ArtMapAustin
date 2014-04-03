@@ -45,6 +45,27 @@ Template.artspotPage.events({
   }
 })
 
+Template.artspotPage.events({
+  'click #comment-button': function(e, template) {
+    e.preventDefault;
+
+    var textBody = $('#comment-input').find('[name=textBody]');
+    console.log(textBody.val());
+    var comment = {
+      body: textBody.val(),
+      artspotId: template.data._id
+    };
+
+    Meteor.call('comment', comment, function(error, commentId) {
+      if (error) {
+        throwError(error.reason);
+      } else {
+        body.val('');
+      }
+    });
+  }
+});
+
 Template.artspotPage.helpers({
   comments: function() {
     return Comments.find({artspotId: this._id});
