@@ -31,6 +31,14 @@ body {
   padding-top: 20px;
 }
 
+#comment-input {
+  padding-top: 20px;
+}
+
+#comment-box {
+  width: 500px;
+}
+
 .fa.fa-twitter {
   color: #3F9EE5;
 }
