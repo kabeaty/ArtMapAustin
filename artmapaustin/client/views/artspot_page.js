@@ -7,7 +7,7 @@ Template.artspotPage.rendered = function() {
     var url = this.lastNode.baseURI;
 
     var findSpot = function() {
-      artspot_id = url.replace('http://localhost:3000/artspots/', '');
+      artspot_id = url.replace('http://artmap.meteor.com//artspots/', '');
       all_artspots = Artspots.find().fetch();
 
       for (var i = 0; i < all_artspots.length; i++) {
