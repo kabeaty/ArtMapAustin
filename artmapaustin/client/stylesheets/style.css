@@ -66,3 +66,20 @@ body {
   background: #F0F0F0;
 }
 
+.edit-title {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.short-title-edit-input {
+  height: 50px;
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+.description-edit-input {
+  height: 100px;
+  width: 400px;
+  margin-bottom: 20px;
+}
+

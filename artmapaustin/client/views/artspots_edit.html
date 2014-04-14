@@ -1,21 +1,19 @@
 <template name="artspotEdit">
   <form class="main">
-    <div class="control-group">
-      <label class="control-label" for="description">short title</label>
-      <div class="input-group input-group-lg">
-        <input class="form-control" name="title" type="text" placeholder={{title}}/>
-      </div>
+    <div>
+      <label class="control-label edit-title" for="description">short title</label>
+        <textarea class="form-control short-title-edit-input" name="title" type="text" rows="1" placeholder={{title}}></textarea>
     </div>
-    <div class="control-group">
-      <label class="control-label" for="description">description of art</label>
+    <div>
+      <label class="control-label edit-title" for="description">description of art</label>
       <div class="controls">
-        <input class="edit-input" name="description" type="text" placeholder={{description}}/>
+        <textarea class="description-edit-input" name="description" rows="3" type="text" placeholder={{description}}></textarea>
       </div>
     </div>
     <div class="control-group">
       <div class="controls">
         {{#if currentUser}}
-        <input type="submit" value="Submit" class="btn btn-primary"/>
+        <input type="submit" value="Submit" id="submit-artspot-edit" class="btn btn-primary"/>
         {{/if}}
       </div>
     </div>
