@@ -24,7 +24,7 @@ Template.artspotPage.rendered = function() {
 
     //Initialize map and set view with tiles
     var mapSpot = L.map('map-spot');
-    mapSpot.setView([this_artspot.latitude, this_artspot.longitude], 13);
+    mapSpot.setView([this.data.latitude, this.data.longitude], 13);
     var OpenStreetMap_Mapnik = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
     })
@@ -39,8 +39,8 @@ Template.artspotPage.rendered = function() {
     });
 
     //Add marker to map
-    var mark = L.marker([this_artspot.latitude, this_artspot.longitude], {icon: myIcon});
-    mark.bindPopup(this_artspot.title).addTo(mapSpot);
+    var mark = L.marker([this.data.latitude, this.data.longitude], {icon: myIcon});
+    mark.bindPopup(this.data.title).addTo(mapSpot);
 };
 
 //Grab artspot info and take user to editArtspot page
