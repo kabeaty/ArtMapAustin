@@ -5,10 +5,25 @@
 // };
 
 Template.artspotPage.rendered = function() {
+    var this_artspot, all_artspots, artspotId;
+
+    var url = this.lastNode.baseURI;
+
+    var findSpot = function() {
+      artspot_id = url.replace('http://localhost:3000/artspots/', '');
+      all_artspots = Artspots.find().fetch();
+
+      for (var i = 0; i < all_artspots.length; i++) {
+        if (all_artspots[i]._id == artspot_id) {
+          this_artspot = all_artspots[i];
+        }
+      }
+    }
+
+    findSpot();
 
     var mapSpot = L.map('map-spot');
-    console.log(this.data);
-    mapSpot.setView([this.data.latitude, this.data.longitude], 13);
+    mapSpot.setView([this_artspot.latitude, this_artspot.longitude], 13);
     var OpenStreetMap_Mapnik = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
     })
@@ -21,8 +36,8 @@ Template.artspotPage.rendered = function() {
       shadowUrl: 'packages/leaflet/images/marker-shadow.png'
     });
 
-    var mark = L.marker([this.data.latitude, this.data.longitude], {icon: myIcon});
-    mark.bindPopup(this.data.title).addTo(mapSpot);
+    var mark = L.marker([this_artspot.latitude, this_artspot.longitude], {icon: myIcon});
+    mark.bindPopup(this_artspot.title).addTo(mapSpot);
 };
 
 // Template.artspotPage.rendered = function() {
