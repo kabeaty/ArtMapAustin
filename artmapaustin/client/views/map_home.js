@@ -10,6 +10,7 @@ Template.maphome.rendered = function() {
 
     OpenStreetMap_Mapnik.addTo(mapHome);
 
+    //Add a marker for each artspot to the map
     var addToMap = function() {
         var spots = Artspots.find().fetch();
         var each, marked;

@@ -1,1 +1,1 @@
-Meteor.subscribe('artspots');
+// Meteor.subscribe('artspots');

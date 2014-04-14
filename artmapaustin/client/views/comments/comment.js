@@ -4,6 +4,7 @@ Template.comment.helpers({
   }
 });
 
+//Format date for displaying when comment submitted
 var DateFormat = {
        long: "DD.MM.YYYY HH:mm"
 };

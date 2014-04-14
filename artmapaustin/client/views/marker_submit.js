@@ -10,6 +10,7 @@ Template.markerSubmit.rendered = function() {
         attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
 })
 
+    //Find user's location and add a circle to map at location
     map.locate({setView: true})
         .on('locationfound', function(e) {
             var circle = L.circle([e.latitude, e.longitude], e.accuracy/2, {
@@ -46,7 +47,7 @@ Template.markerSubmit.events({
 
         var artspot = {
             title: $(e.target).find('[name=title]').val(),
-            description: $(e.target).find('[name=description]').val(),
+            description: $('#new-description-input').val(),
             latitude: marker._latlng.lat,
             longitude: marker._latlng.lng
         };
