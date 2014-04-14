@@ -25,6 +25,7 @@ body {
 
 #artspot-edit {
   float:right;
+  margin-bottom: 10px;
 }
 
 #artspot-comments {
@@ -48,19 +49,20 @@ body {
   font-size: 24px;
 }
 
-.fa.fa-twitter {
-  color: #3F9EE5;
+.twitter-button {
+  margin-bottom: 5px;
 }
 
-#twitter-button {
-  margin-bottom: 10px;
-  background-color: #eee;
+.panel-title {
+  color: #686868;
 }
 
-#tweet-text {
-  color:black;
-  text-decoration: none;
+.panel-default .panel-heading {
+  background-color: #d8d8d8;
+  border: solid 1px #d0d0d0;
 }
 
-
+.panel-body {
+  background: #F0F0F0;
+}
 
