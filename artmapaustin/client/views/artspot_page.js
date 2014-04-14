@@ -1,8 +1,5 @@
 // L.Icon.Default.imagePath = '/images'
 // L.Icon.Default.imagePath = 'packages/leaflet/images'
-// Object.Template.artspotPage.created = function() {
-//     myObject = new PhotoUploader( [options] )
-// };
 
 Template.artspotPage.rendered = function() {
     var this_artspot, all_artspots, artspotId;
@@ -22,6 +19,9 @@ Template.artspotPage.rendered = function() {
 
     findSpot();
 
+    //Gives functionality to Twitter button
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
     var mapSpot = L.map('map-spot');
     mapSpot.setView([this_artspot.latitude, this_artspot.longitude], 13);
     var OpenStreetMap_Mapnik = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -39,10 +39,6 @@ Template.artspotPage.rendered = function() {
     var mark = L.marker([this_artspot.latitude, this_artspot.longitude], {icon: myIcon});
     mark.bindPopup(this_artspot.title).addTo(mapSpot);
 };
-
-// Template.artspotPage.rendered = function() {
-//   !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-// };
 
 Template.artspotPage.events({
   'click #artspot-edit': function(e, template) {
