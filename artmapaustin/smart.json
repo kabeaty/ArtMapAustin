@@ -11,6 +11,7 @@
     "photo-uploader": {
       "git": "https://github.com/pfafman/meteor-photo-uploader.git"
     },
-    "moment": {}
+    "moment": {},
+    "filepicker": {}
   }
 }

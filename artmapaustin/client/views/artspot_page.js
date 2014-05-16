@@ -2,6 +2,7 @@
 // L.Icon.Default.imagePath = 'packages/leaflet/images'
 
 Template.artspotPage.rendered = function() {
+
     var this_artspot, all_artspots, artspotId;
 
     var url = this.lastNode.baseURI;
@@ -58,7 +59,25 @@ Template.artspotPage.events({
 
       Router.go('artspotEdit', artspot);
   }
-})
+});
+
+  //Grab artspot info and take user to artspotGallery page
+  Template.artspotPage.events({
+  'click #artspot-gallery': function(e, template) {
+      e.preventDefault();
+
+      var artspot = {
+        _id: this._id,
+        title: this.title,
+        description: this.description,
+        latitude: this.latitude,
+        longitude: this.longitude
+      }
+
+      Router.go('artspotGallery', artspot);
+  }
+});
+
 
 //Add comment when user clicks comment button
 Template.artspotPage.events({

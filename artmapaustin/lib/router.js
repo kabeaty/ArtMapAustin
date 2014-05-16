@@ -20,6 +20,11 @@ Router.map(function() {
     data: function() { return Artspots.findOne(this.params._id); }
   });
 
+  this.route('artspotGallery', {
+    path: '/artspots/:_id/gallery',
+    data: function() { return Artspots.findOne(this.params._id); }
+  });
+
   this.route('markerSubmit', {
     path: '/submit'
   });
@@ -27,6 +32,7 @@ Router.map(function() {
   this.route('discoverArt', {
     path: '/discover'
   });
+
 });
 
   var requireLogin = function() {
